@@ -1,42 +1,40 @@
 
+let divE = document.getElementById('div-e');
 let falt1 = document.getElementById('falt-1');
 let falt2 = document.getElementById('falt-2');
 let submitb = document.getElementById('btn-1');
 
 let op1 = document.getElementById('plus-o');
 let op2 = document.getElementById('minus-o');
-let op3 = document.getElementById('times-o');
-let op4 = document.getElementById('divide-o');
+let op3 = document.getElementById('divide-o');
+let op4 = document.getElementById('times-o');
 
-console.log(op1);
-
-submitb.addEventListener('click', function() {
+  submitb.addEventListener('click', function() {
     var f1 = Number(falt1.value);
     var f2 = Number(falt2.value);
 
-    console.log(f1 + f2);
-    console.log(typeof(f1), typeof(f2));
-});
+    let ope = '+';
 
-op1.addEventListener('click' , function(){ 
-    let op11 = op1.value;
-    console.log(op11);
-});
+    switch (ope) {
+      case '+':
+        res = f1 + f2;
+          break;
+      case  '-':
+        res = f1 - f2;
+          break;
+      case  '/':
+        res = f1/f2;
+          break;
+      case  '*':
+        res = f1*f2;
+          break;
+      default:
+        alert('Välj räknesätt!');
+          break;
+      }
 
-/*
-switch (operator) {
-    case op1 :
-        break;
-    case op1 :
-        break;
-    case op1 :
-        break;
-    case op1 :
-        break;
-    default:
-        break;
-}
-*/
+    divE.insertAdjacentHTML('beforeend', '<p> Resulat: ' + res + '</p>');  
+  });
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
