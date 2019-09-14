@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ocning-Räkna på det!</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div>
+            <fieldset>
+                <legend id="leg-1">Kalkylator:</legend> <br/>
+                
+                Siffra 1: <br/>
+                <input type="number" name="siffra 1" id="falt-1" placeholder="Mata in en sffra..."> <br/> <br/>
+                Siffra 2: <br/>
+
+                <input type="number" name="siffra 2" id="falt-2" placeholder="Mata in en siffra..."> <br/> <br/>
+
+                <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Räknesätt</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="#" id="plus-o">+</a>
+                          <a href="#" id="minus-o">-</a>
+                          <a href="#" id="times-o">*</a>
+                          <a href="#" id="divided-o">/</a>
+                        </div>
+                      </div>
+
+                <input type="submit" value="Räkna!" class="button" id="btn-1">
+
+            </fieldset>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
