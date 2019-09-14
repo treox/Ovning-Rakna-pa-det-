@@ -9,32 +9,32 @@ let op2 = document.getElementById('minus-o');
 let op3 = document.getElementById('divide-o');
 let op4 = document.getElementById('times-o');
 
-  submitb.addEventListener('click', function() {
-    var f1 = Number(falt1.value);
-    var f2 = Number(falt2.value);
+submitb.addEventListener('click', function() {
+  var f1 = Number(falt1.value);
+  var f2 = Number(falt2.value);
 
-    let ope = '+';
+  let ope = '+';
 
-    switch (ope) {
-      case '+':
-        res = f1 + f2;
-          break;
-      case  '-':
-        res = f1 - f2;
-          break;
-      case  '/':
-        res = f1/f2;
-          break;
-      case  '*':
-        res = f1*f2;
-          break;
-      default:
-        alert('Välj räknesätt!');
-          break;
-      }
+  switch (ope) {
+    case '+':
+      res = f1 + f2;
+        break;
+    case  '-':
+      res = f1 - f2;
+        break;
+    case  '/':
+      res = f1/f2;
+        break;
+    case  '*':
+      res = f1*f2;
+        break;
+    default:
+      alert('Välj räknesätt!');
+        break;
+    }
 
-    divE.insertAdjacentHTML('beforeend', '<p> Resulat: ' + res + '</p>');  
-  });
+  divE.insertAdjacentHTML('beforeend', '<p> Resulat: ' + res + '</p>');  
+});
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
