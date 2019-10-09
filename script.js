@@ -1,4 +1,4 @@
-
+// Få åtkomst till element:
 let divE = document.getElementById('div-e');
 let falt1 = document.getElementById('falt-1');
 let falt2 = document.getElementById('falt-2');
@@ -9,23 +9,43 @@ let op2 = document.getElementById('minus-o');
 let op3 = document.getElementById('divide-o');
 let op4 = document.getElementById('times-o');
 
+// Funktioner för tryck på element i dropdownmeny:
+function plus() {
+  ope = 'plus';
+  return ope;
+}
+
+function minus() {
+  ope = 'minus';
+  return ope;
+}
+
+function divide() {
+  ope = 'divide';
+  return ope;
+}
+
+function times() {
+  ope = 'times';
+  return ope;
+}
+
+// Funktion med switch/case som skriver ut resultat beroende på case:
 submitb.addEventListener('click', function() {
   var f1 = Number(falt1.value);
   var f2 = Number(falt2.value);
 
-  let ope = '+';
-
   switch (ope) {
-    case '+':
+    case plus():
       res = f1 + f2;
         break;
-    case  '-':
+    case minus():
       res = f1 - f2;
         break;
-    case  '/':
+    case  divide():
       res = f1/f2;
         break;
-    case  '*':
+    case  times():
       res = f1*f2;
         break;
     default:
@@ -33,7 +53,7 @@ submitb.addEventListener('click', function() {
         break;
     }
 
-  divE.insertAdjacentHTML('beforeend', '<p> Resulat: ' + res + '</p>');  
+  divE.insertAdjacentHTML('beforeend', '<p> Resultat: ' + res + '</p>');  
 });
 
 /* When the user clicks on the button, 
